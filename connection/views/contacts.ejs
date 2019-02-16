@@ -1,0 +1,8 @@
+<center>
+	<h1>Hi <%= username %></h1>
+	<h2 id='list'>
+		<%for (i=0;i<contacts.length;i++){%>
+	  	<%=i+1%>:<%=contacts[i].username%><br>
+	  	<%}%>
+	</h2>
+</center>

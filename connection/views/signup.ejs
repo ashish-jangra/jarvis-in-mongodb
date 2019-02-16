@@ -1,0 +1,7 @@
+Confirm your OTP sent to your email<br>
+<form method="post" action="/confirm">
+	<input type="email" name="email" value="<%= data.email%>" readonly><br>
+	<input type="password" name="password" value="<%= data.password%>" readonly><br>
+	<input type="text" name="otp" placeholder="otp"><br>
+	<input type="submit" value="Confirm">
+</form>

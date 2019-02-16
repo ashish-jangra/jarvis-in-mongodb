@@ -1,0 +1,23 @@
+<html>
+	<head>
+		<title>App Serving page</title>
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.2.0/socket.io.dev.js"></script>
+	</head>
+	<body>
+		<div id="mario-chat">
+			<div id="chat-window">
+				<div id="output">
+					<% let len=chats.length; for(i=0;i<len;i++) { %>
+					<p><strong> <%=chats[i].sender %> : </strong> <%=chats[i].msg %> </p>
+					<% } %>
+				</div>
+				<div id="feedback"></div>
+			</div>
+			<input type="text" id="handle" value="<%= username %>" readonly>
+			<input type="text" id="message" placeholder="message">
+			<button id="send">Send</button>
+		</div>
+		<script src="chat.js"></script>
+	</body>
+</html>
